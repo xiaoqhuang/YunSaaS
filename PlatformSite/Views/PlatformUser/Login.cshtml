@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="bootstrap-admin-vertical-centered">
+<head>
+    <title>用户登录 - 云商在线 - 平台管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" media="screen" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="~/Content/bootstrap-theme.min.css">
+    <!-- Bootstrap Admin Theme -->
+    <link rel="stylesheet" media="screen" href="~/Content/bootstrap-admin-theme.css">
+</head>
+<body class="bootstrap-admin-without-padding">
+    <div class="container">
+        <div class="row">
+            <h1 class="site-title">云商在线SaaS系统 - 平台管理</h1>
+            <div class="col-lg-12">
+                <form method="post" action="UserLogin" class="bootstrap-admin-login-form">
+                    <h2>登录</h2>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="userName" placeholder="登录名">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="密码">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="remember_me">
+                            记住登录名
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary" type="submit">登录</button>
+                    @{
+                        if (@ViewBag.IsLoginFailed!=null && @ViewBag.IsLoginFailed)
+                        {
+                            <span class="has-error">登录名或密码错误</span>
+                        }
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+        $(function() {
+            $('input[name="userName"]').focus();
+        });
+    </script>
+</body>
+</html>
