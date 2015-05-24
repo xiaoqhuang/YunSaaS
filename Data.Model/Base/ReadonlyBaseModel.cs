@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Data.Model.Base
 {
-    public class ReadonlyBaseModel
+    public abstract class ReadonlyBaseModel
     {
         public ReadonlyBaseModel()
         {

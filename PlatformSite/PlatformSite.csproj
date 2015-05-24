@@ -132,12 +132,17 @@
       <Project>{9524A0A7-462F-494E-9A4D-21BF5BDCFC5F}</Project>
       <Name>Data.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{8DBD20A4-0869-481A-AB01-0563DB4EF99F}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Service\Service.csproj">
       <Project>{a9236f3f-bc7f-455c-8659-552e53e7b82b}</Project>
       <Name>Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\CookieContext.cs" />
     <Compile Include="App_Data\SessionContext.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -160,15 +165,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Scripts\framework\bootstrap.js" />
+    <Content Include="Scripts\framework\bootstrap.min.js" />
+    <None Include="Scripts\framework\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\framework\jquery-1.10.2.js" />
+    <Content Include="Scripts\framework\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\framework\jquery.validate.js" />
+    <Content Include="Scripts\framework\modernizr-2.6.2.js" />
+    <Content Include="Scripts\framework\respond.js" />
+    <Content Include="Scripts\framework\respond.min.js" />
+    <Content Include="Scripts\user.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -183,9 +189,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\framework\jquery-1.10.2.min.map" />
     <Content Include="Views\PlatformUser\Login.cshtml" />
     <Content Include="Views\Shared\Platform\PlatformLayout.cshtml" />
+    <Content Include="Views\PlatformUser\Registry.cshtml" />
+    <Content Include="Views\PlatformUser\Registry\ChooseUserType.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

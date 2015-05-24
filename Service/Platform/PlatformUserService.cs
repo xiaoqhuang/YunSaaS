@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity.Infrastructure;
+using System.Linq;
 using Data.Context.Platform;
 using Data.Model.Base;
 using Data.Model.Platform;
@@ -10,7 +11,12 @@ namespace Service.Platform
     public class PlatformUserService
     {
         [Dependency]
-        public PlatformUserContext UserContext { private get; set; }
+        internal PlatformUserContext UserContext { get; set; }
+
+        public PlatformUser LoadByUserName(string userName)
+        {
+            return UserContext.PlatformUsers.FirstOrDefault(user => user.UserName == userName);
+        }
 
         public PlatformUser Login(string userName, string password)
         {
@@ -27,6 +33,12 @@ namespace Service.Platform
                 UserContext.SaveChanges();
             }
             return (platformUser != null && platformUser.EncryptedPassword == encryptedPassword) ? platformUser : null;
+        }
+
+        public void AddUser(PlatformUser platformUser)
+        {
+            UserContext.PlatformUsers.Add(platformUser);
+            UserContext.SaveChanges();
         }
     }
 }

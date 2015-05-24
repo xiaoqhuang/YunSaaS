@@ -49,9 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseModel.cs" />
-    <Compile Include="Base\BaseUser.cs" />
     <Compile Include="Base\ReadonlyBaseModel.cs" />
-    <Compile Include="Factory\FactoryUser.cs" />
     <Compile Include="Platform\PlatformUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,3 +1,9 @@
-﻿.textCenter {
-    text-align: center;
+﻿.text-bottom {
+    vertical-align: bottom;
+}
+.text-top {
+    vertical-align: top;
+}
+.text-middle {
+    vertical-align: middle;
 }

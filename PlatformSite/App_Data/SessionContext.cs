@@ -5,10 +5,12 @@ namespace PlatformSite.App_Data
 {
     public class SessionContext
     {
+        private string Key_PlatformUser = "PlatformUser";
+
         public PlatformUser PlatformUser
         {
-            get { return GetSession<PlatformUser>("PlatformUser"); }
-            set { SetSession("PlatformUser", value); }
+            get { return GetSession<PlatformUser>(Key_PlatformUser); }
+            set { SetSession(Key_PlatformUser, value); }
         }
 
         private T GetSession<T>(string sessionKey)

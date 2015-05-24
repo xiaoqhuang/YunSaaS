@@ -135,9 +135,18 @@ body.bootstrap-admin-with-small-navbar{
 }
 
 .site-title {
-    width: 481px;
+    width: 312px;
     margin: 0 auto 30px;
     color:#5e5e5e;
+}
+
+.registry-link {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.login-message {
+    margin-left: 20px;
 }
 
 /** Table with actions */
@@ -510,4 +519,12 @@ table > tbody > tr > td.actions .btn{
     border-radius: 4px;
     padding: 40px;
     text-align: center;
+}
+
+
+.user-registry {
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 600px;
 }

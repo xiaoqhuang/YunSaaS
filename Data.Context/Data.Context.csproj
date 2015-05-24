@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Platform\FactoryUserContext.cs" />
     <Compile Include="Platform\PlatformBaseContext.cs" />
     <Compile Include="Platform\PlatformUserContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

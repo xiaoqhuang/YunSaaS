@@ -10,12 +10,6 @@ namespace Core.Web
     {
         private readonly IUnityContainer container;
 
-        [Dependency]
-        public IUnityContainer Container
-        {
-            get { return container; }
-        }
-
         public ControllerResolver(IUnityContainer container)
         {
             this.container = container;
