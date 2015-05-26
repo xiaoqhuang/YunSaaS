@@ -157,23 +157,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-admin-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\common.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\framework\bootstrap.js" />
-    <Content Include="Scripts\framework\bootstrap.min.js" />
-    <None Include="Scripts\framework\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\framework\jquery-1.10.2.js" />
-    <Content Include="Scripts\framework\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\framework\jquery.js" />
     <Content Include="Scripts\framework\jquery.validate.js" />
-    <Content Include="Scripts\framework\modernizr-2.6.2.js" />
-    <Content Include="Scripts\framework\respond.js" />
-    <Content Include="Scripts\framework\respond.min.js" />
     <Content Include="Scripts\user.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -189,13 +180,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\framework\jquery-1.10.2.min.map" />
     <Content Include="Views\PlatformUser\Login.cshtml" />
     <Content Include="Views\Shared\Platform\PlatformLayout.cshtml" />
     <Content Include="Views\PlatformUser\Registry.cshtml" />
     <Content Include="Views\PlatformUser\Registry\ChooseUserType.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
