@@ -6,7 +6,7 @@ using Service.Platform;
 
 namespace PlatformSite.Controllers.Platform
 {
-    public class PlatformUserController : PlatformBaseController
+    public class UserController : BaseController
     {
         [Dependency]
         internal PlatformUserService UserService { private get; set; }

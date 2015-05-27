@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
+using Helper;
 
 namespace PlatformSite.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -21,6 +22,14 @@ namespace PlatformSite.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult GetValidateImage()
+        {
+            string randomCode;
+            byte[] imageByte = ValidateCodeHelper.GenerateValidateGraphic(out randomCode);
+            SessionContext.ValidateCode = randomCode;
+            return File(imageByte, @"image/jpeg");
         }
     }
 }

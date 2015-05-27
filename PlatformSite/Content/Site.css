@@ -29,6 +29,7 @@
 
 .absolute-center {
     height: 400px;
+    width:900px;
     overflow: auto;
     margin: auto;
     position: absolute;
@@ -59,6 +60,7 @@
 
 .login-container {
     height: 100%;
+    width:327px;
     border: 1px solid lightgray;
     padding: 0;
 }
@@ -69,6 +71,12 @@
     }
 .form-row {
     padding: 13px 30px 13px 30px;
+}
+.validate-image {
+    width: 80px;
+    height: 34px;
+    margin-left: 3px;
+    border-radius: 2px;
 }
 /*End Index*/
 

@@ -2,9 +2,9 @@
 using Microsoft.Practices.Unity;
 using PlatformSite.App_Data;
 
-namespace PlatformSite.Controllers.Platform
+namespace PlatformSite.Controllers
 {
-    public class PlatformBaseController : Controller
+    public class BaseController : Controller
     {
         [Dependency]
         public SessionContext SessionContext { get; set; }

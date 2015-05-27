@@ -149,8 +149,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebInitializer.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Platform\PlatformBaseController.cs" />
-    <Compile Include="Controllers\Platform\PlatformUserController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Platform\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,10 +180,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\PlatformUser\Login.cshtml" />
+    <Content Include="Views\Base\Login.cshtml" />
     <Content Include="Views\Shared\Platform\PlatformLayout.cshtml" />
-    <Content Include="Views\PlatformUser\Registry.cshtml" />
-    <Content Include="Views\PlatformUser\Registry\ChooseUserType.cshtml" />
+    <Content Include="Views\Base\Registry.cshtml" />
+    <Content Include="Views\Base\Registry\ChooseUserType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Images\" />

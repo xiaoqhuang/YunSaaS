@@ -26,3 +26,7 @@
     init();
 
 })();
+
+$(function() {
+    $(".query-validate-image").bind("click", function () { $(this).attr("src", $(this).attr("org-src") + "?" + Math.random()); });
+});
