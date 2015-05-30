@@ -13,6 +13,8 @@ namespace PlatformSite.Controllers.Platform
 
         public ActionResult Login()
         {
+            IUnityContainer containser = HttpContext.Application["Container"] as IUnityContainer;
+            containser.RegisterInstance("CurrentSchema", "baidu");
             if (UserService.LoadByUserName("admin") == null)
             {
                 PlatformUser platformUser = new PlatformUser

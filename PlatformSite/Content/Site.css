@@ -84,6 +84,31 @@
 
 
 /*Login*/
+
+html.bootstrap-admin-vertical-centered {
+    height: 100%;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+html.bootstrap-admin-vertical-centered body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+html.bootstrap-admin-vertical-centered .container{
+    display: table;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+html.bootstrap-admin-vertical-centered .container .row{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
 .login-form {
     max-width: 475px;
     padding: 10px 30px;

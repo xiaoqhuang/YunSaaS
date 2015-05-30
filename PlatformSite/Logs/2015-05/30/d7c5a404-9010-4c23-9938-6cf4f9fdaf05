@@ -1,0 +1,113 @@
+﻿2015-05-30 23:44:38,292 [6] INFO  Global [(null)] - ==========Begin Request==========
+
+2015-05-30 23:44:38,306 [6] INFO  Global [(null)] - *****Request Info*****
+
+2015-05-30 23:44:38,307 [6] INFO  Global [(null)] - Host=XIAOQ-PC
+
+2015-05-30 23:44:38,307 [6] INFO  Global [(null)] - Request Time=2015/5/30 23:44:38
+
+2015-05-30 23:44:38,307 [6] INFO  Global [(null)] - Request URL=/
+
+2015-05-30 23:44:38,308 [6] INFO  Global [(null)] - Request Action=GET
+
+2015-05-30 23:44:38,308 [6] INFO  Global [(null)] - Request Header= [
+
+2015-05-30 23:44:38,309 [6] INFO  Global [(null)] - name=Connection, value=keep-alive
+
+2015-05-30 23:44:38,309 [6] INFO  Global [(null)] - name=Accept, value=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+
+2015-05-30 23:44:38,309 [6] INFO  Global [(null)] - name=Accept-Encoding, value=gzip, deflate, sdch
+
+2015-05-30 23:44:38,310 [6] INFO  Global [(null)] - name=Accept-Language, value=zh-CN,zh;q=0.8,en;q=0.6,ja;q=0.4
+
+2015-05-30 23:44:38,310 [6] INFO  Global [(null)] - name=Cookie, value=ASP.NET_SessionId=4gwwxea4ll5x3ex4z4jzrvpp
+
+2015-05-30 23:44:38,311 [6] INFO  Global [(null)] - name=Host, value=localhost:30462
+
+2015-05-30 23:44:38,311 [6] INFO  Global [(null)] - name=User-Agent, value=Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36
+
+2015-05-30 23:44:38,312 [6] INFO  Global [(null)] - ]
+
+2015-05-30 23:44:38,831 [6] INFO  PlatformSite.Controllers.HomeController [(null)] - 2. Info
+
+2015-05-30 23:44:38,831 [6] WARN  PlatformSite.Controllers.HomeController [(null)] - 3. Warn
+
+2015-05-30 23:44:38,832 [6] ERROR PlatformSite.Controllers.HomeController [(null)] - 4. Error
+
+2015-05-30 23:44:38,833 [6] FATAL PlatformSite.Controllers.HomeController [(null)] - 5. Fatal
+
+2015-05-30 23:44:42,294 [6] INFO  Global [(null)] - 
+==========Request Error==========
+
+2015-05-30 23:44:42,294 [6] INFO  Global [(null)] - Page total execution time = 4005 ms
+
+2015-05-30 23:44:42,295 [6] INFO  Global [(null)] - Request Cookies= [
+
+2015-05-30 23:44:42,296 [6] INFO  Global [(null)] - name=ASP.NET_SessionId, value=System.Web.HttpCookie
+
+2015-05-30 23:44:42,296 [6] INFO  Global [(null)] - ]
+
+2015-05-30 23:44:42,296 [6] INFO  Global [(null)] - Request QueryString= [
+
+2015-05-30 23:44:42,297 [6] INFO  Global [(null)] - ]
+
+2015-05-30 23:44:42,297 [6] INFO  Global [(null)] - Request Form= [
+
+2015-05-30 23:44:42,297 [6] INFO  Global [(null)] - ]
+
+2015-05-30 23:44:42,298 [6] INFO  Global [(null)] - Request Session= [
+
+2015-05-30 23:44:42,298 [6] INFO  Global [(null)] - ]
+
+2015-05-30 23:44:42,298 [6] FATAL Global [(null)] - Request Error
+System.Exception: Index异常 ---> System.ArgumentNullException: 值不能为 null。
+参数名: UserName
+   在 PlatformSite.Controllers.HomeController.Index() 位置 c:\Project\SaaS\YunSaaS\PlatformSite\Controllers\HomeController.cs:行号 20
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 PlatformSite.Controllers.HomeController.Index() 位置 c:\Project\SaaS\YunSaaS\PlatformSite\Controllers\HomeController.cs:行号 24
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__36(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass30.<BeginInvokeActionMethodWithFilters>b__2f(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<>c__DisplayClass28.<BeginInvokeAction>b__19()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<BeginInvokeAction>b__1b(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   在 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__4(IAsyncResult asyncResult, ProcessRequestState innerState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+

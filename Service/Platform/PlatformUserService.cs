@@ -1,7 +1,5 @@
-﻿using System.Data.Entity.Infrastructure;
-using System.Linq;
+﻿using System.Linq;
 using Data.Context.Platform;
-using Data.Model.Base;
 using Data.Model.Platform;
 using Helper;
 using Microsoft.Practices.Unity;

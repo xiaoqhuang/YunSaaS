@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Text;
 using Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CommonTest
+namespace CommonTest.HelperTest
 {
     [TestClass]
     public class EncryptHelperTest
@@ -11,7 +10,6 @@ namespace CommonTest
         [TestMethod]
         public void MD5HashTest()
         {
-            ValidateCodeHelper.GenerateValidateGraphic();
             //多次MD5结果要一致
             string input = Guid.NewGuid() + DateTime.Now.ToLongTimeString();
             Assert.AreEqual(EncryptHelper.MD5Hash(input), EncryptHelper.MD5Hash(input));

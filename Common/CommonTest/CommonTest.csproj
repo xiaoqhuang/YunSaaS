@@ -50,12 +50,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="EncryptHelperTest.cs" />
+    <Compile Include="HelperTest\EncryptHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Helper\Helper.csproj">
-      <Project>{8DBD20A4-0869-481A-AB01-0563DB4EF99F}</Project>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{8dbd20a4-0869-481a-ab01-0563db4ef99f}</Project>
       <Name>Helper</Name>
     </ProjectReference>
   </ItemGroup>

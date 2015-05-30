@@ -68,6 +68,10 @@
       <Project>{298ef1d5-f129-451f-9e3e-b15d8108aaef}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\Helper\Helper.csproj">
+      <Project>{8DBD20A4-0869-481A-AB01-0563DB4EF99F}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data.Context\Data.Context.csproj">
       <Project>{b7f800c9-e291-460d-b64c-57164c5965b0}</Project>
       <Name>Data.Context</Name>
@@ -75,10 +79,6 @@
     <ProjectReference Include="..\Data.Model\Data.Model.csproj">
       <Project>{9524a0a7-462f-494e-9a4d-21bf5bdcfc5f}</Project>
       <Name>Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Helper\Helper.csproj">
-      <Project>{8DBD20A4-0869-481A-AB01-0563DB4EF99F}</Project>
-      <Name>Helper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
