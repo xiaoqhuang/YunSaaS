@@ -2,27 +2,19 @@
 using System.Web.Mvc;
 using Helper;
 using log4net;
+using Microsoft.Practices.Unity;
+using Service.Platform;
 
 namespace PlatformSite.Controllers
 {
     public class HomeController : BaseController
     {
         private ILog logger = LogManager.GetLogger(typeof (HomeController));
+        [Dependency]
+        internal PlatformUserService UserService { private get; set; }
+
         public ActionResult Index()
         {
-            logger.Debug("1. Debug");
-            logger.Info("2. Info");
-            logger.Warn("3. Warn");
-            logger.Error("4. Error");
-            logger.Fatal("5. Fatal");
-            try
-            {
-                throw new ArgumentNullException("UserName");
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Index异常", ex);
-            }
             return View();
         }
 

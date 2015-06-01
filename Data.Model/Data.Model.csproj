@@ -52,6 +52,14 @@
     <Compile Include="Base\ReadonlyBaseModel.cs" />
     <Compile Include="Platform\PlatformUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tenant\Message\BusinessMessage.cs" />
+    <Compile Include="Tenant\Message\CompanyNotice.cs" />
+    <Compile Include="Platform\Company.cs" />
+    <Compile Include="Tenant\Order\PurchaseOrder.cs" />
+    <Compile Include="Tenant\Origanization\Department.cs" />
+    <Compile Include="Tenant\Origanization\DepartmentLevel.cs" />
+    <Compile Include="Tenant\Origanization\Employee.cs" />
+    <Compile Include="Tenant\Origanization\EmployeeLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

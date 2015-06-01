@@ -16,7 +16,6 @@ namespace PlatformSite
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             log4net.Config.XmlConfigurator.Configure();
             IUnityContainer container = new UnityContainer();
-            container.RegisterInstance("CurrentSchema", "xunlei");
             WebInitializer.Init(container);
             Application["Container"] = container;
         }

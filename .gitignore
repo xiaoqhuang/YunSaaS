@@ -6,6 +6,7 @@ ehthumbs.db
 Desktop.ini
 bin/
 obj/
+Logs/
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/

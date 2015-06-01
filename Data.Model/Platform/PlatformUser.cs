@@ -13,18 +13,25 @@ namespace Data.Model.Platform
         public Guid UserId { get; set; }
 
         public UserType UserType { get; set; }
+
         [MaxLength(100)]
         public string UserName { get; set; }
-        [MaxLength(200)]
+
+        [MaxLength(400)]
         public string EncryptedPassword { get; set; }
+
         [MaxLength(20)]
         public string RealName { get; set; }
+
         [MaxLength(100)]
         public string Email { get; set; }
+
         [MaxLength(20)]
         public string MobilePhone { get; set; }
+
         [MaxLength(50)]
         public string CompanyName { get; set; }
+
         public virtual ICollection<UserLoginLog> UserLoginLogs { get; set; }
     }
 

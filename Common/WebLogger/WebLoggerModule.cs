@@ -73,6 +73,29 @@ namespace WebLogger
             }
         }
 
+        private void EndRequest(object sender, EventArgs e)
+        {
+            try
+            {
+                ThreadLogger threadLogger = LoggerFactory.GetThreadLogger();
+                HttpApplication httpApplication = (HttpApplication) sender;
+                HttpContext context = httpApplication.Context;
+
+                PrintRequestInfo(threadLogger.Logger, context.Request, null);
+
+                threadLogger.Logger.Info("==========End Request==========");
+                threadLogger.Stopwatch.Stop();
+                threadLogger.Logger.Info("Page total execution time = " + threadLogger.Stopwatch.ElapsedMilliseconds +
+                                         " ms");
+
+                WriteLogs(context.Response, threadLogger);
+            }
+            catch
+            {
+                //ignore
+            }
+        }
+
         private void SaveExceptionLog(string logs)
         {
             string folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs",
@@ -81,7 +104,7 @@ namespace WebLogger
             {
                 Directory.CreateDirectory(folder);
             }
-            File.AppendAllText(Path.Combine(folder, Guid.NewGuid().ToString()), logs, Encoding.UTF8);
+            File.AppendAllText(Path.Combine(folder, "Exception_" + Guid.NewGuid()), logs, Encoding.UTF8);
         }
 
         private void PrintRequestInfo(ILog logger, HttpRequest request, HttpSessionState session)
@@ -123,30 +146,6 @@ namespace WebLogger
                 }
             }
         }
-
-        private void EndRequest(object sender, EventArgs e)
-        {
-            try
-            {
-                ThreadLogger threadLogger = LoggerFactory.GetThreadLogger();
-                HttpApplication httpApplication = (HttpApplication) sender;
-                HttpContext context = httpApplication.Context;
-
-                PrintRequestInfo(threadLogger.Logger, context.Request, null);
-
-                threadLogger.Logger.Info("==========End Request==========");
-                threadLogger.Stopwatch.Stop();
-                threadLogger.Logger.Info("Page total execution time = " + threadLogger.Stopwatch.ElapsedMilliseconds +
-                                         " ms");
-
-                WriteLogs(context.Response, threadLogger);
-            }
-            catch
-            {
-                //ignore
-            }
-        }
-
         private void WriteLogs(HttpResponse response, ThreadLogger logs)
         {
             if (isWriteError)
